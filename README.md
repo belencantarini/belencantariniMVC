@@ -28,7 +28,7 @@ Donde se enumeran todos los tratamientos ofrecidos, con la posibilidad de editar
 ```bash
 Generar nuevo tratamiento
 ```
-En esta seccion se puede geenrar un nuevo tratamiento 
+En esta seccion se puede generar un nuevo tratamiento 
 ```bash
 Pendientes de confirmacion
 ```
