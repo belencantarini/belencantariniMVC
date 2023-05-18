@@ -58,10 +58,8 @@
         } else {
             include "paginas/inicio.php";
         }
-        if (isset($_GET["exito_envio"])) {
-            exitoEnvioContactoSweetAlert();
-            redireccionContacto();
-        }
+
+        
         ?>
     </section>
     <footer>

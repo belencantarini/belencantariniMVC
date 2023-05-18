@@ -1,6 +1,8 @@
 <?php
 
-function exitoEnvioContactoSweetAlert(){
+class ControladorSweetAlert{
+
+static public function exitoEnvioContactoSweetAlert(){
     echo "<script>
     Swal.fire({
         icon: 'success',
@@ -12,9 +14,8 @@ function exitoEnvioContactoSweetAlert(){
     </script>";
 }
 
-function redireccionContacto(){
-    echo "<script>
-    window.history.replaceState('http://localhost/proyectos%20php/AdministracionDiNatale/', '', 'index.php?ruta=contacto');
-    </script>";
+static public function redireccionContacto(){
+    echo '<script>window.location = "index.php?ruta=inicio";</script>';
+}
 }
 

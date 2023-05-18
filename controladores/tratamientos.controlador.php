@@ -49,7 +49,7 @@ class ControladorTratamientos
 			$datos = array(
 				"id" => $id,
 				"tratamiento" => $_POST["editarTratamiento"],
-				"tarifa" => $_POST[""],
+				"tarifa" => $_POST["editarTarifa"],
 				"descripcion" => $_POST["editarDescripcion"],
 				"estado" => "procesando",
 			);

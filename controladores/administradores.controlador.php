@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 class ControladorAdministradores {
 
@@ -22,7 +22,7 @@ class ControladorAdministradores {
                     echo '<div class="alert alert-danger mt-2">Error al ingresar al sistema, el email o la contraseña no coinciden, vuelve a intentarlo</div>';
                 } elseif ($respuesta["usuario"] == $_POST["loginUsuario"] && $respuesta["clave"] == $_POST["loginClave"]) {
                     $_SESSION["validarIngreso"] = "ok";
-                    header("location:index.php?ruta=admin_tratamiento");
+                    echo '<script>window.location = "index.php?ruta=admin_tratamiento";</script>';
                 } else {
                     echo '<script>
                         if (window.history.replaceState) {

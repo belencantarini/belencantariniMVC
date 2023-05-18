@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 ?>
 
 <section class="mx-auto p-5 border rounded shadow w-50 my-5">

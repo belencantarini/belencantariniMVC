@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 header('Content-type:image/png');
 
 // echo file_get_contents("https://media.geeksforgeeks.org/wp-content/uploads/geeksforgeeks-6.png");

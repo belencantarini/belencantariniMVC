@@ -71,7 +71,7 @@
             <div>Contactame</div>
             <div class="h2">Enviame tu consulta</div>
         </div>        
-        <form name="sendEmailForm" action="controladores/contacto.controlador.php" method="POST" class="container p-0">
+        <form name="sendEmailForm" method="POST" class="container p-0">
             <div class="d-flex gap-2 flex-column flex-md-row m-0">
                 <input type="text" class="form-control w-100" id="formNombre" name="nombre" placeholder="Nombre" required>
                 <input type="email" class="form-control w-100" id="formEmail" name="email" placeholder="Correo" required>
@@ -80,6 +80,15 @@
             <input type="hidden" name="_subject" value="Nuevo mensaje!">
             <p class="p-0 m-0">Cuidá tu imagen, y sentite plena y natural: conocé los tratamientos. Tenemos tratamientos según tus necesidades.</p>
             <p class="text-muted small">Envia tu consulta y te contestare a la brevedad</p>
+          <?php
+                $enviarEmail = new ControladorContacto();
+                $enviarEmail -> ctrEnviarMail();
+                if (isset($_GET["exito_envio"])) {
+                    // $sweetAlert = ControladorSweetAlert::exitoEnvioContactoSweetAlert();
+                    echo '<div class="alert alert-success"> Hemos recibido su mensaje, le responderemos a la brevedad </div>';
+                    // $sweetAlert = ControladorSweetAlert::redireccionContacto();
+                }
+            ?>
             <input class="btn btn-purple w-100" type="submit" value="Enviar formulario"></input>
         </form>
     </div>
